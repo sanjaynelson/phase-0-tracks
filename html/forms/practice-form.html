@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Survey</title>
+</head>
+<body>
+  <H1>Please fill out the form below:</H1>
+  <form name="HTML Practice Form" action="success.html" method="post">
+    <fieldset>
+      <div>
+        <label>Full Name:</label>
+        <input type="text" name="fullname">
+      </div>
+      <div>
+        <label>DBC Cohort:</label>
+        <input type="text" name="DBCcohort">
+      </div>
+      <div>
+        <label>Are you currently attending DBC</label>
+        <input type="checkbox" name="currentattendance" value="true">
+      </div>
+      <div>
+        <label>Current date:</label>
+        <input type="date" name="date">
+      </div>
+    </fieldset>
+    <fieldset>
+      <div>
+        <label>How do you feel about HTML?</label>
+        <select name="html opinion">
+          <option value="good">I love it!</option>
+          <option value="okay">It's alright.</option>
+          <option value="bad">It's disgusting.</option>
+        </select>
+      </div>
+      <div>
+        <label for="opinionexplanation">Explain your feelings.</label>
+        <textarea id="opinionexplanation" name="userinput"></textarea>
+      </div>
+    </fieldset>
+  </form>
+</body>
+</html>
