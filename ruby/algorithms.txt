@@ -1,3 +1,4 @@
+To use an elevator:
 
 - Locate on wall panel outside of elevator doorway.
 - If you want to go up, press the up arrow, if down, press down arrow
@@ -12,3 +13,11 @@
 - until elevator door has reopened, stay in elevator
 	- if elevator door opens, but interior sign reads any other floor, remain in elevator
 	- if elevator door reopens and interior sign reads your floor, exit elevator
+
+To maintain cellphone battery life:
+
+Wake up cellphone
+	- if cellphone doesn’t wake up, it is dead and requires charging
+	- else check battery life on screen
+		if battery life is significantly low, plug into charger
+		else use cellphone as desired
