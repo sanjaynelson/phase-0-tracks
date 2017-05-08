@@ -1,0 +1,14 @@
+
+- Locate on wall panel outside of elevator doorway.
+- If you want to go up, press the up arrow, if down, press down arrow
+- Enter elevator
+	- wait for door to open
+	- wait 2 seconds for any passengers to exit
+	- after 2 seconds have elapsed since last passenger exited, enter elevator
+- choose floor
+	- Locate button panel inside elevator
+	- locate button for the floor you are going to
+	- press button
+- until elevator door has reopened, stay in elevator
+	- if elevator door opens, but interior sign reads any other floor, remain in elevator
+	- if elevator door reopens and interior sign reads your floor, exit elevator
