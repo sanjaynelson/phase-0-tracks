@@ -6,7 +6,7 @@ hamstervol = gets.chomp.to_i
 puts "The Hamster's volume is #{hamstervol}."
 puts "What's the hamster's fur color?"
 hamstercolor = gets.chomp
-puts "The color of the hamster's fur is somehow #{hamstercolor}"
+puts "The color of the hamster's fur is a beautiful #{hamstercolor}."
 puts "Is the hamster worth adopting? (y or n)"
 hamsteradopt = gets.chomp
 if hamsteradopt == "y"
@@ -14,14 +14,14 @@ if hamsteradopt == "y"
   puts "The Hamster is worth adopting."
 else hamsteradopt == "n"
   hamsteradopt = false
-  puts "The Hamster is not worth adopting."
+  puts "Ew, the Hamster is not worth adopting."
 end
 puts "What's the hamster's estimated age?"
-hamsterestage = gets.chomp.to_i
-if hamsterestage.empty?
+hamsterestage = gets.chomp
+if hamsterestage == ""
   hamsterestage = nil
-  puts "Age unknown"
+  puts "The hamster's age is unknown."
 else
-  hamsteradopt
-  puts "The estimated age of the hamster is #{hamsterestage}"
+  hamsterestage = hamsterestage.to_i
+  puts hamsterestage
 end
