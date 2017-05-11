@@ -45,22 +45,24 @@ def encrypt(x)
     # statement that would make the rest of the code work
     # password[index] = password[index].next.upcase!
     # index += 1
-    if password[index] == "a..y"
-      password[index] == password[index].next.upcase!
+    if password[index] = "a..y"
+      password[index] = password[index].next
       index += 1
-    elsif password[index] == "z"
+      # p password[index]
+    elsif password[index] = "z"
       password[index] == "a"
       index += 1
-    elsif password[index] == " "
-      password[index] == " "
-      index += 1
-    else
+      # p password[index]
+    # elsif password[index] == " "
+    #   password[index] == " "
+    #   index += 1
+    #   p password[index]
     end
   end
-  p password
+  puts password
 end
 
-puts "The encryption of EEF is #{encrypt("eef")}"
+encrypt("zed")
 
 # def decrypt(y)
 
