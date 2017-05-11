@@ -26,17 +26,19 @@
 #nicornu
 #get
 
-password = ""
+#password = ""
 # password = "unicorn"
 # password_lastletter = password.length-1
 
 # puts "length of password is #{password.length} letters"
 # puts "the letter at index #{password_lastletter}."
 
+puts "Please use encrypt method to encrypt your password."
+
 def encrypt(x)
   index = 0
   password = x
-  while index < password.length
+  while index << password.length
     #this code works right now for everything
     #besides using Z or spaces
     #the pseudocode below would work out an if else
@@ -60,23 +62,23 @@ def encrypt(x)
   p password
 end
 
-encrypt("eef")
+puts "The encryption of EEF is #{encrypt("eef")}"
 
-def decrypt(y)
+# def decrypt(y)
 
-  encrypted_password = y
-  alphabet = "abcdefghijklmnopqrstuvwxyz"
-  index = 0
+#   encrypted_password = y
+#   alphabet = "abcdefghijklmnopqrstuvwxyz"
+#   index = 0
 
-  while index < encrypted_password.length
-    var1 = encrypted_password[index]
-    var2 = alphabet.index(var1)
-    var2 = var2 - 1
-    p alphabet[var2]
-    index += 1
-  end
+#   while index < encrypted_password.length
+#     var1 = encrypted_password[index]
+#     var2 = alphabet.index(var1)
+#     var2 = var2 - 1
+#     p alphabet[var2]
+#     index += 1
+#   end
 
 
-end
+# end
 
-decrypt("FFG")
+# decrypt("FFG")
