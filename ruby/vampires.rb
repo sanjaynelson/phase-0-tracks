@@ -95,4 +95,4 @@ until (numapp <= 0) do
     numapp -= 1
     puts "There are #{numapp} applicants left!"
 end
-
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
