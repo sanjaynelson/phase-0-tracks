@@ -33,20 +33,20 @@
 # puts "length of password is #{password.length} letters"
 # puts "the letter at index #{password_lastletter}."
 
-puts "Please use encrypt method to encrypt your password."
+# puts "Please use encrypt method to encrypt your password."
 
 def encrypt(x)
   index = 0
   password = x
-  while index << password.length
-    #this code works right now for everything
-    #besides using Z or spaces
-    #the pseudocode below would work out an if else
-    #statement that would make the rest of the code work
+  while index < password.length
+    # this code works right now for everything
+    # besides using Z or spaces
+    # the pseudocode below would work out an if else
+    # statement that would make the rest of the code work
     # password[index] = password[index].next.upcase!
     # index += 1
     if password[index] == "a..y"
-      password[index] = password[index].next.upcase!
+      password[index] == password[index].next.upcase!
       index += 1
     elsif password[index] == "z"
       password[index] == "a"
@@ -54,10 +54,8 @@ def encrypt(x)
     elsif password[index] == " "
       password[index] == " "
       index += 1
+    else
     end
-
-
-
   end
   p password
 end
