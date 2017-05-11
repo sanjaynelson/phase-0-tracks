@@ -57,19 +57,30 @@ until (numapp <= 0) do
       puts "Your loss."
     end
 #Allergies
+  alcollect = false
   puts "Please list any allergies, or type 'done'"
-  until allergies == "done" do
+  until alcollect do
+  #until [allergies].include?("done" || "sunshine")
     allergies = gets.chomp
-    if allergies != "sunshine"
-      puts "I see. Any others? If not, type 'done'."
+    if allergies == "sunshine"
+      puts "Probably a vampire."
+      alcollect = true
+      susallergy = true
+    elsif allergies == "done"
+      puts "Ok, thanks for sharing."
+      alcollect = true
     else
+      puts "I see. Any others? If not, type 'done'."
+      allergies = gets.chomp
+      susallergy = false
+      alcollect = false
     end
-
   end
 
 #Determining if Vampire
 
-    if !vname
+    if susallergy
+    elsif !vname
       puts "Definitely a vampire!"
     elsif !birthyear && !garlicbread && !enroll
       puts "Almost certainly a vampire."
