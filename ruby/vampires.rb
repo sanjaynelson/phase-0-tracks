@@ -1,8 +1,11 @@
 #Inquire how many applicants
+
 puts "How many applications today?"
 numapp = gets.chomp.to_i
 until (numapp <= 0) do
-  #What is your name?
+
+#What is your name?
+
   puts "What is your name?"
   vn1 = "Drake Cula"
   vn2 = "Tu Fang"
@@ -14,7 +17,9 @@ until (numapp <= 0) do
       puts "Nice to meet you #{vname}!"
       vname = true
     end
-  #How old are you?
+
+#Age/Birthyear
+
   puts "How old are you?"
   age = gets.chomp.to_i
   puts "So you're #{age}. What year were you born?"
@@ -27,7 +32,9 @@ until (numapp <= 0) do
       puts "your math is fishy."
       birthyear = false
   end
-  #Our company cafeteria serves garlic bread. Should we order some for you?
+
+#Our company cafeteria serves garlic bread. Should we order some for you?
+
   puts "Our company cafeteria serves garlic bread. Should we order some for you? (y or n)"
   garlicbread = gets.chomp
     if garlicbread == "y"
@@ -37,7 +44,9 @@ until (numapp <= 0) do
       garlicbread = false
       puts "..Oh."
     end
-  #Would you like to enroll in the company’s health insurance?
+
+#Would you like to enroll in the company’s health insurance?
+
   puts "Would you like to enroll in the company’s health insurance? (y or n)"
   enroll = gets.chomp
     if enroll == "y"
@@ -47,6 +56,19 @@ until (numapp <= 0) do
       enroll = false
       puts "Your loss."
     end
+#Allergies
+  puts "Please list any allergies, or type 'done'"
+  until allergies == "done" do
+    allergies = gets.chomp
+    if allergies != "sunshine"
+      puts "I see. Any others? If not, type 'done'."
+    else
+    end
+
+  end
+
+#Determining if Vampire
+
     if !vname
       puts "Definitely a vampire!"
     elsif !birthyear && !garlicbread && !enroll
