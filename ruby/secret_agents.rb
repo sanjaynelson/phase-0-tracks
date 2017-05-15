@@ -35,26 +35,25 @@
 
 # puts "Please use encrypt method to encrypt your password."
 
-def encrypt(x)
+def encrypt(string)
   index = 0
-  password = x
   blank = ""
-  while index < password.length
+  while index < string.length
     # this code works right now for everything
     # besides using Z or spaces
     # the pseudocode below would work out an if else
     # statement that would make the rest of the code work
     # password[index] = password[index].next.upcase!
     # index += 1
-    if password[index] == "z"
+    if string[index] == "z"
       blank = "a"
       index += 1
       # p password[index]
-    elsif password[index] == " "
+    elsif string[index] == " "
       blank = blank + " "
       index += 1
     else
-      blank = blank + password[index].next
+      blank = blank + string[index].next
       index += 1
     # else password[index] = ('a'..'y').to_s
     #   password[index] = password[index].next!
@@ -66,7 +65,7 @@ def encrypt(x)
     #   # p password[index]
     end
   end
-return blank
+return puts blank
 end
 
 puts encrypt("ca ts")
@@ -83,7 +82,7 @@ def decrypt(string)
     print alphabet[var2]
     index += 1
   end
-
+return string
 end
 
-puts decrypt("ffg")
+decrypt("bcd")
