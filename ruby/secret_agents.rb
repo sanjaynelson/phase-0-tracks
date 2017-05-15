@@ -51,7 +51,7 @@ def encrypt(x)
       index += 1
       # p password[index]
     elsif password[index] == " "
-      blank = " "
+      blank = blank + " "
       index += 1
     else
       blank = blank + password[index].next
@@ -71,21 +71,19 @@ end
 
 puts encrypt("ca ts")
 
-# def decrypt(y)
+def decrypt(string)
 
-#   encrypted_password = y
-#   alphabet = "abcdefghijklmnopqrstuvwxyz"
-#   index = 0
+  alphabet = "abcdefghijklmnopqrstuvwxyz"
+  index = 0
 
-#   while index < encrypted_password.length
-#     var1 = encrypted_password[index]
-#     var2 = alphabet.index(var1)
-#     var2 = var2 - 1
-#     p alphabet[var2]
-#     index += 1
-#   end
+  while index < string.length
+    var1 = string[index]
+    var2 = alphabet.index(var1)
+    var2 = var2.to_i - 1
+    print alphabet[var2]
+    index += 1
+  end
 
+end
 
-# end
-
-# decrypt("FFG")
+puts decrypt("ffg")
