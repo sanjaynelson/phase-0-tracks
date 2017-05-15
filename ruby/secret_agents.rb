@@ -38,7 +38,7 @@
 def encrypt(string)
   index = 0
   blank = ""
-  while index < string.length
+  while index < string.to_s.length
     # this code works right now for everything
     # besides using Z or spaces
     # the pseudocode below would work out an if else
@@ -65,17 +65,15 @@ def encrypt(string)
     #   # p password[index]
     end
   end
-return puts blank
+return blank
 end
 
 puts encrypt("ca ts")
 
 def decrypt(string)
-
   alphabet = "abcdefghijklmnopqrstuvwxyz"
   index = 0
-
-  while index < string.length
+  while index < string.to_s.length
     var1 = string[index]
     var2 = alphabet.index(var1)
     var2 = var2.to_i - 1
@@ -85,4 +83,5 @@ def decrypt(string)
 return string
 end
 
-decrypt("bcd")
+decrypt(encrypt("swordfish"))
+
