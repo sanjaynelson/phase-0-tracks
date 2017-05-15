@@ -45,21 +45,27 @@ def encrypt(x)
     # statement that would make the rest of the code work
     # password[index] = password[index].next.upcase!
     # index += 1
-    if password[index] = ('a'..'y').to_s
-      password[index] = password[index].next!
-      index += 1
-      # p password[index]
-    elsif password[index] == "z"
-      password[index] == "a"
+    if password[index] == "z"
+      password[index] = "a"
       index += 1
       # p password[index]
     elsif password[index] == " "
       password[index] == " "
       index += 1
-      # p password[index]
+    else
+      password = password[index].next
+      index += 1
+    # else password[index] = ('a'..'y').to_s
+    #   password[index] = password[index].next!
+    #   index += 1
+    #   # p password[index]
+    # elsif password[index] == " "
+    #   password[index] == " "
+    #   index += 1
+    #   # p password[index]
     end
+  return password
   end
-  p x
 end
 
 encrypt("zed")
