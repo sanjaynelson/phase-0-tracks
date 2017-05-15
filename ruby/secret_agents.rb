@@ -38,6 +38,7 @@
 def encrypt(x)
   index = 0
   password = x
+  blank = ""
   while index < password.length
     # this code works right now for everything
     # besides using Z or spaces
@@ -46,14 +47,14 @@ def encrypt(x)
     # password[index] = password[index].next.upcase!
     # index += 1
     if password[index] == "z"
-      password[index] = "a"
+      blank = "a"
       index += 1
       # p password[index]
     elsif password[index] == " "
-      password[index] == " "
+      blank = " "
       index += 1
     else
-      password = password[index].next
+      blank = blank + password[index].next
       index += 1
     # else password[index] = ('a'..'y').to_s
     #   password[index] = password[index].next!
@@ -64,11 +65,11 @@ def encrypt(x)
     #   index += 1
     #   # p password[index]
     end
-  return password
   end
+return blank
 end
 
-encrypt("zed")
+puts encrypt("ca ts")
 
 # def decrypt(y)
 
