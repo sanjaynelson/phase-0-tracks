@@ -85,3 +85,19 @@ end
 
 decrypt(encrypt("swordfish"))
 
+### interface
+# Ask user where they want to decrypt or encrypt
+puts "Hi, do you want an to (encrypt) or (decrypt) your password?"
+answer = gets.chomp
+until answer = "encrypt" || answer = "decrypt"
+  puts "Hi, do you want an to (encrypt) or (decrypt) your password?"
+end
+# ask for password
+puts "Great, please enter your password."
+password = gets.chomp
+# conduct operation, print it on screen, exit.
+  if answer = "encrypt"
+    puts "Your encryption is #{encrypt(password)}"
+  elsif answer = "decrypt"
+    puts "Your decryption is #{decrypt(password)}"
+  end
