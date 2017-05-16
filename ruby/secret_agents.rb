@@ -68,7 +68,7 @@ def encrypt(string)
 return blank
 end
 
-puts encrypt("ca ts")
+#puts encrypt("ca ts")
 
 def decrypt(string)
   alphabet = "abcdefghijklmnopqrstuvwxyz"
@@ -82,8 +82,7 @@ def decrypt(string)
   end
 return string
 end
-
-decrypt(encrypt("swordfish"))
+#decrypt(encrypt("swordfish"))
 
 ### interface
 # Ask user where they want to decrypt or encrypt
