@@ -24,7 +24,7 @@ puts "What Decor theme would you like? Please limit your answer to a brief sente
 application[:decortheme] = gets.chomp
 puts "Great. Do you want to request specialized consulting? (y,n)"
 application[:consulting] = gets.chomp.downcase
-if application[:consulting] = "no" || "n"
+if application[:consulting] == "no" || "n"
   application[:consulting] == false
 else
   application[:consulting] == true
@@ -38,9 +38,15 @@ updates_wanted = gets.chomp.downcase
 if updates_wanted == "y"
   puts "Alright, would you like your listed name, age, number of children, or none? (answer with: 'name', 'age', 'numchildren', 'decortheme', 'consulting', or 'none')"
   whichupdate = gets.chomp.downcase.to_sym
-  if whichupdate == "none"
-  else
+  if whichupdate == "name" || "decortheme"
+    puts "Ok, what do you want to change this to?"
     application[whichupdate.to_sym] = gets.chomp
+  elsif whichupdate == "age" || "numchildren"
+    puts "Ok, what do you want to change this to?"
+    application[whichupdate.to_sym] = gets.chomp.to_i
+  elsif whichupdate == "consulting"
+    puts "Ok, do you want consulting? (answer with 'true' or 'false')"
+    application[whichupdate.to_sym] = gets.chomp.to_b
   end
   # if whichupdate == "age"
   #   puts "Alright, what would you like to change this to?"
@@ -57,7 +63,6 @@ if updates_wanted == "y"
   #   application[:namespace] = gets.chomp
   # end
 end
-p application
-
-# Allow Corrections from user (Convert symb to string?)
 # Print updated hash, exit
+p application
+exit
