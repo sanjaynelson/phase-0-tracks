@@ -31,8 +31,6 @@ def fib (num)
     return []
   elsif num == 1
     return [0]
-  # elsif num == 2
-  #   return fibarray
   else
     num -= 2
     num.times {
@@ -45,3 +43,28 @@ end
 p fib(6)
 p fib(2)
 p fib(100)[-1] == 218922995834555169026
+
+#create bubble sort
+#compare array at first two indexes
+#swap based off size, lowest comes first
+#check next number - index up, repeat process
+#once no swapping is happening, exit
+def sortarray (array)
+  rounds = array.length - 1
+  swap = true
+  while swap == true
+  swap = false
+  rounds.times {|index|
+    if array[index] > array[index + 1]
+      value1 = array[index]
+      array[index] = array[index + 1]
+      array[index + 1] = value1
+      swap = true
+    end
+  }
+  end
+return array
+end
+array = [1, 5, 2, 7, 8, 3, 9]
+p array
+p sortarray(array)
