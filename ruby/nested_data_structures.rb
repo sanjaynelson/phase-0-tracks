@@ -1,26 +1,28 @@
 clothing_organization = {
-  'Closet' => [
-    'closet_hanger' => [
-      'long-sleeves'
-      'sweaters'
+  closet: {
+    closet_hanger: [
+      'long-sleeves',
+      'sweaters',
       't-shirts'
-    ]
-    'closet_shelf' => [
-      'shorts'
-      'sleep pants'
+    ],
+    closet_shelf: [
+      'shorts',
+      'sleep pants',
       'dress pants'
     ]
-  ]
-  'Ikea Shelf' => [
-    'Jeans'
-    'drawers' = [
-      'socks'
+  },
+  ikeashelf: {
+    jeans: 'jeans' ,
+    drawers: [
+      'socks',
       'underpants'
     ]
-  ]
-  'Small Shelf' => [
+  },
+  smallshelf: [
     'shoes'
   ]
 }
 
-p clothing_organization
+# p clothing_organization
+# p clothing_organization[:closet][:closet_hanger]
+#p clothing_organization[:ikeashelf][:drawers][0]
