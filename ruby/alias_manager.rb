@@ -41,6 +41,11 @@ end
 
 #Provide a user interface that lets a user enter a name and get a fake name back. Let the user do this repeatedly until they decide to quit by typing 'quit'. (They might just hit Enter to continue.)
 
-puts "Please enter name to alias. When finished, hit enter."
-input = gets.chomp
-puts "Your alias is: #{namealias(input)}"
+puts "Welcome to the alias generator."
+run = "\n"
+while run == "\n"
+  puts "Please enter name to alias. When finished, hit enter."
+  input = gets.chomp
+  puts "Your alias is: #{namealias(input)}. Press enter to create another, or type anything to exit."
+  run = gets
+end
