@@ -1,28 +1,23 @@
 def namealias (fullname)
   p fullname
   names = fullname.split(" ").reverse!
-  letters = []
+  letterarray = []
   ##create iteration/block syntax cycle for each individual name
   ##change first with last name - split to words, reverse
-  names.map! do |sepname|
-    sepname.downcase
-  end
-  names.each { |sepname| letters << sepname.split('') }
-  letters.map!
-    # names.map! do |namearry|
-    #   if namearry.include?("a" || "e" || "i" || "o" || "u")
-    #    namearry.next
-    #  end
-    # end
-  # sep_name.map! do |namearry|
-  #   namearry.map! do |letter|
-  #     if letter.include?("a" || "e" || "i" || "o" || "u")
-  #       letter.next
-  # end
-  #if vowels, change to next vowels - split individual words to letters seperately, downcase, create vowels conditional, upcase first letter of each
-  #return p sep_name
-  p letters
+  ##if vowels, change to next vowels - split individual words to letters seperately, downcase, create vowels conditional, upcase first letter of each
+  names.map!{|sepname| sepname.downcase}
   p names
+  names.each { |sepname| letterarray << sepname.split('') }
+  p letterarray
+  letterarray.map do |index|
+    index.map do |letter|
+      if ["a", "e", "i", "o", "u"].include?(letter)
+        letter.next!
+      end
+    end
+  end
+  p letterarray
+  #return p sep_name
 end
 
 namealias("Sanjay Nelson")
