@@ -43,9 +43,18 @@ end
 
 puts "Welcome to the alias generator."
 run = "\n"
+storednames = []
 while run == "\n"
   puts "Please enter name to alias. When finished, hit enter."
   input = gets.chomp
-  puts "Your alias is: #{namealias(input)}. Press enter to create another, or type anything to exit."
+  inputalias = namealias(input)
+  puts "Your alias is: #{inputalias}. Press enter to create another, or type anything to exit."
+  storednames.push({
+    name: input,
+    alias: inputalias
+  })
   run = gets
+end
+storednames.each do |input|
+  puts "The alias for #{input[:name]} is #{input[:alias]}."
 end
