@@ -1,5 +1,7 @@
 class Puppy
-
+  def initialize
+    puts "Initializing new puppy instance..."
+  end
   def fetch(toy)
     puts "I brought back the #{toy}!"
     toy
@@ -26,3 +28,23 @@ pup.speak(4)
 pup.roll_over
 pup.dog_years(10)
 pup.pawshake
+
+class Athlete
+  def initialize
+    puts "New Athlete initializing."
+  end
+  def workout(number)
+    number.times {puts "Does #{number} rep(s)!"}
+  end
+  def run(laps)
+    laps.times {puts "#{laps} laps!"}
+  end
+end
+# have loop that makes 50 instances of class
+# instance num var outside of until loop
+#
+# loop stores instances in data structure
+#
+numofathletes = 50
+created_athletes = {}
+until
