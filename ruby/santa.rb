@@ -1,4 +1,6 @@
 class Santa
+  attr_reader :age, :ethnicity
+  attr_accessor :gender
   def initialize(gender, ethnicity)
     @gender = gender
     @ethnicity = ethnicity
@@ -26,12 +28,6 @@ class Santa
       @reindeer_ranking.push(reindeername)
     p @reindeer_ranking
   end
-  def age
-    @age
-  end
-  def ethnicity
-    @ethnicity
-  end
 end
 
 # santa = Santa.new
@@ -47,6 +43,9 @@ end
 santa1 = Santa.new("none", "none")
 santa1.get_mad_at("Dasher")
 p santa1.age
+p santa1.gender
+santa1.gender=("male")
+p santa1.gender
 # santas << Santa.new("male", "black")
 # santas << Santa.new("female", "Latino")
 # santas << Santa.new("bigender", "white")
