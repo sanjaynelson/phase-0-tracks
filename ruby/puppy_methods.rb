@@ -33,8 +33,8 @@ class Athlete
   def initialize
     puts "New Athlete initializing."
   end
-  def workout(number)
-    number.times {puts "Does #{number} rep(s)!"}
+  def workout(rep)
+    rep.times {puts "does #{rep} rep(s)!"}
   end
   def run(laps)
     laps.times {puts "#{laps} laps!"}
@@ -45,6 +45,19 @@ end
 #
 # loop stores instances in data structure
 #
-numofathletes = 50
-created_athletes = {}
-until
+athletes_created = 0
+#namenumber = 1
+stored_athletes = []
+until athletes_created == 50
+  #athlete = "Athlete#{namenumber}"
+  athlete = Athlete.new
+  #namenumber += 1
+  stored_athletes << athlete
+  athletes_created += 1
+end
+# p stored_athletes
+
+stored_athletes.each do |currentath|
+  puts "#{currentath} #{currentath.workout(2)}"
+  puts "#{currentath} #{currentath.run(2)}"
+end
