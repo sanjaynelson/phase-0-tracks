@@ -1,6 +1,6 @@
 class Santa
-  attr_reader :age, :ethnicity
-  attr_accessor :gender
+  attr_reader :ethnicity
+  attr_accessor :gender, :age
   def initialize(gender, ethnicity)
     @gender = gender
     @ethnicity = ethnicity
@@ -34,19 +34,26 @@ end
 # santa.speak
 # santa.eat_milk_and_cookies("chocolate")
 
-santas = []
+# santas = []
 ethnicities_ary = ["black", "Latino", "Indian", "Middle-Eastern", "white"]
-genders_ary = ["female", "male", "agender", "bigender", "male"]
-ethnicities_ary.length.times do |i|
-  santas << Santa.new(genders_ary[i], ethnicities_ary[i])
-end
-santa1 = Santa.new("none", "none")
-santa1.get_mad_at("Dasher")
-p santa1.age
-p santa1.gender
-santa1.gender=("male")
-p santa1.gender
+genders_ary = ["female", "male", "agender", "bigender"]
+# ethnicities_ary.length.times do |i|
+#   santas << Santa.new(genders_ary[i], ethnicities_ary[i])
+# end
+# santa1 = Santa.new("none", "none")
+# santa1.get_mad_at("Dasher")
+# p santa1.age
+# p santa1.gender
+# santa1.gender=("male")
+# p santa1.gender
 # santas << Santa.new("male", "black")
 # santas << Santa.new("female", "Latino")
 # santas << Santa.new("bigender", "white")
 # santas << Santa.new("male", "Japanese")
+
+100.times do |currentsanta|
+  currentsanta = Santa.new(genders_ary.sample, ethnicities_ary.sample)
+  p currentsanta.age
+  p currentsanta.gender
+  p currentsanta.age= rand(140)
+end
