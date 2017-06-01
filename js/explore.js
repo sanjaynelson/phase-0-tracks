@@ -11,4 +11,7 @@ function reverse(phrase) {
   return newphrase;
 }
 
-console.log(reverse("hello"))
+phrasestore = reverse("hello")
+if (1 == 1) {
+  console.log(phrasestore)
+}
