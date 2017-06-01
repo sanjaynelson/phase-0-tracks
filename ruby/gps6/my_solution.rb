@@ -98,3 +98,18 @@ end
 
 #=======================================================================
 # Reflection Section
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+# The higher-level syntax uses a string as the key and a hash rocket to input the second-level hash to it. The second-level hash's syntax is simply two symbols.
+
+# What does require_relative do? How is it different from require?
+# The big difference between require & require relative is where Ruby looks (determined by which command is used - Require brings in third party gems, libraries, etc. and searches a wider field, require_relevative searches the directory the rb file is in.)
+
+# What are some ways to iterate through a hash?
+# using methods such as .each, .map, .map!, etc
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+# I learned more about the scope - instance variables can be accessed throughout the class, so the methods didn't need them as inputs.
+
+# What concept did you most solidify in this challenge?
+# scope, refactoring
