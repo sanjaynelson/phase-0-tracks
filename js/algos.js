@@ -49,3 +49,31 @@ console.log(shared_pair({name: "Steven", age: 54}, {name: "Tamir", age: 54}));
 console.log(shared_pair({animal: "Dog", legs: 4}, {animal: "Dog", legs: 3}));
 console.log(shared_pair({Cat: "Dog", legs: 4}, {animal: "Dog", legs: 3}));
 
+// Release 2
+
+// Write a function that takes an integer for length, and builds and returns an array of strings of the given length. So if we ran your function with an argument of 3, we would get an array of 3 random words back (the words don't have to be actual sensical English words -- "nnnnfph" totally counts). The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters. (This involves a new trick, generating a random number, that you'll have to look up, but the solution on how to do so is relatively straightforward.)
+// Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your "longest word" function, and prints the result.
+
+// Function will input variable integer
+// Empty array
+// reusable variable for individual words
+// Variable of Alphabet for letters
+// use number of words to determine words to create, and randomly pick length between 1-10
+// pick random letters the random length of times, use that to create word, then put word into array
+
+function rand_strings(num_words) {
+  var return_array = [];
+  var alphabet = "abcdefghijklmnopqrstuvwxyz"
+  for (i = 0; i < num_words; i++) {
+    var word = '';
+    var wordlength = Math.floor((Math.random() * 10) + 1);
+    for ( i2 = 0; i2 < wordlength; i2++) {
+      word += alphabet[Math.floor((Math.random() * alphabet.length))]
+    }
+    return_array.push(word)
+  }
+  return return_array
+}
+
+console.log(rand_strings(2));
+console.log(rand_strings(4));
