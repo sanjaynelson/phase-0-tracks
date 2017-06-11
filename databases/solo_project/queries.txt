@@ -1,0 +1,77 @@
+1.
+input: SELECT * FROM customers;
+
+output:
+1|Bob|Johnson|1.4|1
+2|Bob|McCray|3.6|2
+3|Cat|Stevens|1|2
+4|Dave|Decaf|5.5|1
+
+2.
+input:
+UPDATE cafes
+SET weeklydays_open = 7
+WHERE id = 1;
+
+output:
+1|Starbucks|Glendale|7
+2|Collective Espresso|Northside|7
+
+3.
+input:
+SELECT * FROM cafes, customers
+WHERE customers.favshop_id = cafes.id;
+
+output:
+1|Starbucks|Glendale|7|1|Bob|Johnson|1.4|1
+2|Collective Espresso|Northside|7|2|Bob|McCray|3.6|2
+2|Collective Espresso|Northside|7|3|Cat|Stevens|1|2
+1|Starbucks|Glendale|7|4|Dave|Decaf|5.5|1
+
+4.
+input:
+SELECT cafes.name, cafes.location, customers.first_name
+FROM cafes
+JOIN customers ON customers.favshop_id = cafes.id;                 
+
+output:
+Starbucks|Glendale|Bob
+Collective Espresso|Northside|Bob
+Collective Espresso|Northside|Cat
+Starbucks|Glendale|Dave
+
+5.
+input:
+DELETE FROM customers
+WHERE first_name = "Dave";
+
+output: (none)
+
+Release 3
+
+1)
+input:
+SELECT cafes.name, cafes.location, customers.first_name, customers.last_name
+FROM customers
+INNER JOIN cafes
+ON customers.favshop_id = cafes.id;                    
+
+output:
+Starbucks|Glendale|Bob|Johnson
+Collective Espresso|Northside|Bob|McCray
+Collective Espresso|Northside|Cat|Stevens
+
+2)
+
+input:
+SELECT cafes.name, cafes.location, customers.first_name, customers.last_name
+FROM customers
+LEFT JOIN cafes
+ON customers.favshop_id = cafes.id;
+
+output:
+Starbucks|Glendale|Bob|Johnson
+Collective Espresso|Northside|Bob|McCray
+Collective Espresso|Northside|Cat|Stevens
+
+
