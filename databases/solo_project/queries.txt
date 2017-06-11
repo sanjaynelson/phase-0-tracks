@@ -47,3 +47,31 @@ WHERE first_name = "Dave";
 
 output: (none)
 
+Release 3
+
+1)
+input:
+SELECT cafes.name, cafes.location, customers.first_name, customers.last_name
+FROM customers
+INNER JOIN cafes
+ON customers.favshop_id = cafes.id;                    
+
+output:
+Starbucks|Glendale|Bob|Johnson
+Collective Espresso|Northside|Bob|McCray
+Collective Espresso|Northside|Cat|Stevens
+
+2)
+
+input:
+SELECT cafes.name, cafes.location, customers.first_name, customers.last_name
+FROM customers
+LEFT JOIN cafes
+ON customers.favshop_id = cafes.id;
+
+output:
+Starbucks|Glendale|Bob|Johnson
+Collective Espresso|Northside|Bob|McCray
+Collective Espresso|Northside|Cat|Stevens
+
+
