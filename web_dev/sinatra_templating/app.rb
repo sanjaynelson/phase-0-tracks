@@ -17,6 +17,12 @@ get '/students/new' do
   erb :new_student
 end
 
+get '/scott' do
+  @justjennifer = db.execute("SELECT name FROM students WHERE name = 'Jennifer Gilbert'")
+  @students = db.execute("SELECT * FROM students")
+  erb :scott
+end
+
 # create new students via
 # a form
 post '/students' do
