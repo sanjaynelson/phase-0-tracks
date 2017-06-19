@@ -37,6 +37,24 @@ get '/students' do
   response
 end
 
+get '/contact' do
+  "123 Seasame Street."
+end
+
+get '/great_job' do
+  names = db.execute("SELECT * FROM students")
+  name = ""
+  names.each do |student|
+    name << "Good job, #{student['name']}!<br>"
+  end
+  name
+end
+
+get '/:int1/plus/:int2' do
+  sum = :int1.to_s.to_i + :int2.to_s.to_i
+  "the sum is #{sum}."
+end
+
 # write a GET route that retrieves
 # a particular student
 
